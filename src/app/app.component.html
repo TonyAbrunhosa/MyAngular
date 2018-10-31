@@ -1,3 +1,5 @@
-<ap-photo url="https://cdn.pixabay.com/photo/2018/02/01/12/51/mammal-3123179_960_720.jpg" description="Leão1" ></ap-photo>
-<ap-photo url="https://cdn.pixabay.com/photo/2017/12/26/16/09/lion-3040797_960_720.jpg" description="Leão2" ></ap-photo>
-<ap-photo url="https://lh4.googleusercontent.com/-BqOlHjLQEks/TWughuMW-bI/AAAAAAAAABg/5jNRu4FIEjI/s1600/leao.jpg" description="Leão3" ></ap-photo>
+<ap-photo 
+    *ngFor="let photo of photos"
+    [url]="photo.url" 
+    [description]="photo.description">
+</ap-photo>

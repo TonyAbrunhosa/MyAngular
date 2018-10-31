@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PhotoService } from './photos/photo/photo.service';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+  photos: Object[] = [];
+
+  constructor(pS: PhotoService) {
+
+    pS
+      .listFromUser('flavio')
+      .subscribe(photos => this.photos = photos);
+
+  }
 }
